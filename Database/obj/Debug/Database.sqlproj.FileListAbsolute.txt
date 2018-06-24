@@ -1,0 +1,9 @@
+E:\WebApp\Database\bin\Debug\Database.dacpac
+E:\WebApp\Database\bin\Debug\Database.dll
+E:\WebApp\Database\bin\Debug\Database.pdb
+E:\WebApp\Database\obj\Debug\Model.xml
+E:\WebApp\Database\obj\Debug\refactor.xml
+E:\WebApp\Database\obj\Debug\postdeploy.sql
+E:\WebApp\Database\obj\Debug\predeploy.sql
+E:\WebApp\Database\obj\Debug\Database.dll
+E:\WebApp\Database\obj\Debug\Database.pdb

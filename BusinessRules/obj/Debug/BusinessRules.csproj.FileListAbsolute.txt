@@ -1,0 +1,41 @@
+C:\Users\moc\documents\visual studio 2013\Projects\WebApplication1\BusinessRules\bin\Debug\BusinessRules.dll
+C:\Users\moc\documents\visual studio 2013\Projects\WebApplication1\BusinessRules\bin\Debug\BusinessRules.pdb
+C:\Users\moc\documents\visual studio 2013\Projects\WebApplication1\BusinessRules\obj\Debug\BusinessRules.csprojResolveAssemblyReference.cache
+C:\Users\moc\documents\visual studio 2013\Projects\WebApplication1\BusinessRules\obj\Debug\BusinessRules.dll
+C:\Users\moc\documents\visual studio 2013\Projects\WebApplication1\BusinessRules\obj\Debug\BusinessRules.pdb
+E:\WebApplication1\BusinessRules\bin\Debug\BusinessRules.dll.config
+E:\WebApplication1\BusinessRules\bin\Debug\BusinessRules.dll
+E:\WebApplication1\BusinessRules\bin\Debug\BusinessRules.pdb
+E:\WebApplication1\BusinessRules\bin\Debug\DataAccessLayer.dll
+E:\WebApplication1\BusinessRules\bin\Debug\DTO.dll
+E:\WebApplication1\BusinessRules\bin\Debug\EntityFramework.dll
+E:\WebApplication1\BusinessRules\bin\Debug\EntityFramework.SqlServer.dll
+E:\WebApplication1\BusinessRules\bin\Debug\DataAccessLayer.pdb
+E:\WebApplication1\BusinessRules\bin\Debug\DataAccessLayer.dll.config
+E:\WebApplication1\BusinessRules\bin\Debug\DTO.pdb
+E:\WebApplication1\BusinessRules\bin\Debug\EntityFramework.xml
+E:\WebApplication1\BusinessRules\bin\Debug\EntityFramework.SqlServer.xml
+E:\WebApplication1\BusinessRules\obj\Debug\BusinessRules.csprojAssemblyReference.cache
+E:\WebApplication1\BusinessRules\obj\Debug\BusinessRules.csproj.CoreCompileInputs.cache
+E:\WebApplication1\BusinessRules\obj\Debug\BusinessRules.csproj.CopyComplete
+E:\WebApplication1\BusinessRules\obj\Debug\BusinessRules.dll
+E:\WebApplication1\BusinessRules\obj\Debug\BusinessRules.pdb
+E:\WebApp\BusinessRules\obj\Debug\BusinessRules.csproj.CoreCompileInputs.cache
+E:\WebApp\BusinessRules\bin\Debug\CurrentDB.mdf
+E:\WebApp\BusinessRules\bin\Debug\CurrentDB_log.ldf
+E:\WebApp\BusinessRules\bin\Debug\BusinessRules.dll.config
+E:\WebApp\BusinessRules\bin\Debug\BusinessRules.dll
+E:\WebApp\BusinessRules\bin\Debug\BusinessRules.pdb
+E:\WebApp\BusinessRules\bin\Debug\DataAccessLayer.dll
+E:\WebApp\BusinessRules\bin\Debug\DTO.dll
+E:\WebApp\BusinessRules\bin\Debug\EntityFramework.dll
+E:\WebApp\BusinessRules\bin\Debug\EntityFramework.SqlServer.dll
+E:\WebApp\BusinessRules\bin\Debug\DataAccessLayer.pdb
+E:\WebApp\BusinessRules\bin\Debug\DataAccessLayer.dll.config
+E:\WebApp\BusinessRules\bin\Debug\DTO.pdb
+E:\WebApp\BusinessRules\bin\Debug\EntityFramework.xml
+E:\WebApp\BusinessRules\bin\Debug\EntityFramework.SqlServer.xml
+E:\WebApp\BusinessRules\obj\Debug\BusinessRules.csprojAssemblyReference.cache
+E:\WebApp\BusinessRules\obj\Debug\BusinessRules.csproj.CopyComplete
+E:\WebApp\BusinessRules\obj\Debug\BusinessRules.dll
+E:\WebApp\BusinessRules\obj\Debug\BusinessRules.pdb

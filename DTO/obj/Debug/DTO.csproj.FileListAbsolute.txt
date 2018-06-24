@@ -1,0 +1,5 @@
+E:\WebApp\DTO\bin\Debug\DTO.dll
+E:\WebApp\DTO\bin\Debug\DTO.pdb
+E:\WebApp\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+E:\WebApp\DTO\obj\Debug\DTO.dll
+E:\WebApp\DTO\obj\Debug\DTO.pdb

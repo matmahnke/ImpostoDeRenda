@@ -1,0 +1,37 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Reflection;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace BusinessRules
+{
+    /// <summary>
+    /// Para maiores detalhes de tudo que um 
+    /// AutoMapper real deveria ter, consulte
+    /// o framework AutoMapper.dll
+    /// </summary>
+    public class CustomAutoMapper<T, W>
+    {
+        public static T Map(W w)
+        {
+            T t = Activator.CreateInstance<T>();
+            PropertyInfo[] propriedades = typeof(W).GetProperties();
+            foreach (var item in propriedades)
+            {
+                try
+                {
+                    object data = item.GetValue(w);
+                    typeof(T).GetProperty(item.Name).SetValue(t, data);
+                }
+                catch
+                {
+                    //Apenas captura a exceção
+                }
+            }
+            return t;
+        }
+
+    }
+}
