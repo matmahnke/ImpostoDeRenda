@@ -12,4 +12,9 @@ namespace DTO
         public double Renda { get; set; }
         //public virtual ICollection<Dependente> Dependente { get; set; }
     }
+    public class Tabela
+    {
+        public IList<Contribuinte> Contribuintes { get; set; }
+        public IList<double> Imposto { get; set; }
+    }
 }

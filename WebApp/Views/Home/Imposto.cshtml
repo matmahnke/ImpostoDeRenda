@@ -1,0 +1,76 @@
+﻿<h2>Imposto</h2>
+<div>
+    <div>
+        <span>Salário mínimo</span>
+    </div>
+    <div>
+        <input type="number" name="SalarioMinimo" id="SalarioMinimo" min="1" step="any" />
+    </div>
+    <div>
+        <input type="submit" name="btn" id="btn" value="Continuar" />
+    </div>
+</div>
+<div id="div1" class="gridsquare"></div>
+<div id="div2" class="gridsquare"></div>
+<div id="div3" class="gridsquare"></div>
+<script src="~/Scripts/jquery-3.3.1.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $('#btn').click(function () {
+            $.ajax({
+                type: 'GET',
+                url: '/api/Contribuintes/?SalarioMinimo=' + $('#SalarioMinimo').val(),
+                cache: false,
+                contentType: 'application/json; charset=utf-8',
+                data: JSON.stringify({ SalarioMinimo: $('#SalarioMinimo').val() }),
+                success: function (data) {
+                    populaTabela(data);
+                }
+            });
+        })
+    })
+    function populaTabela(v) {
+        var element = document.getElementById("div1");
+        var element1 = document.getElementById("div2");
+        var element2 = document.getElementById("div3");
+
+        var paraex = document.createElement("div");
+        var nomex = document.createTextNode("Nome");
+        var rendax = document.createTextNode("Renda");
+        var impostox = document.createTextNode("Imposto");
+        element.appendChild(nomex);
+        element1.appendChild(rendax);
+        element2.appendChild(impostox);
+        for (var i = 0; i < v.Contribuintes.length; i++) {
+
+            var d = document.createElement("div");
+            d.className = "row";
+            var td = document.createElement("td");
+            td.className = "gridsquare";
+
+            var para = document.createElement("td");
+            para.className = "gridsquare";
+            var node = document.createTextNode(v.Contribuintes[i].Nome);
+            para.appendChild(node);
+
+            var para1 = document.createElement("td");
+            para1.className = "gridsquare";
+            var node1 = document.createTextNode(v.Contribuintes[i].Renda);
+            para1.appendChild(node1);
+
+
+            var para2 = document.createElement("td");
+            para2.className = "gridsquare";
+            var node2 = document.createTextNode(v.Imposto[i]);
+            para2.appendChild(node2);
+
+            element.appendChild(td);
+            element.appendChild(para);
+            element.appendChild(td);
+            element1.appendChild(para1);
+            element1.appendChild(td);
+            element2.appendChild(para2);
+            element2.appendChild(td);
+        }
+    }
+</script>

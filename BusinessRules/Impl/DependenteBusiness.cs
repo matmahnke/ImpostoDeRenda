@@ -16,15 +16,16 @@ namespace BusinessRules.Impl
             base.Validate(item);
         }
 
-        public void Add(Dependente item)
+        public int Add(Dependente item)
         {
             CurrentContext c = new CurrentContext();
             Validate(item);
             using (CurrentContext db = new CurrentContext())
             {
-                db.Dependentes.Add(item);
+                item = db.Dependentes.Add(item);
                 db.SaveChanges();
             }
+            return item.ID.Value;
         }
 
         public void Edit(Dependente item)

@@ -1,0 +1,120 @@
+﻿<div id="DivContribuinte">
+    <div>
+        <div>
+            <span>Nome</span>
+        </div>
+        <div>
+            <input type="text" name="Nome" id="Nome" value="" />
+        </div>
+    </div>
+    <div>
+        <div>
+            <span>CPF</span>
+        </div>
+        <div>
+            <input type="text" name="CPF" id="CPF" value="" />
+        </div>
+    </div>
+    <div>
+        <div>
+            <span>Renda mensal</span>
+        </div>
+        <div>
+            <input type="number" name="Renda" id="Renda" value="" />
+        </div>
+    </div>
+</div>
+<div>
+    <input type="button" name="InserirDependente" id="InserirDependente" hidden value="Adicionar dependente" onclick="habilitaDependente()" />
+</div>
+<div id="DivDependente" style="display: none">
+    <div>
+        <span>Nome do dependente</span>
+    </div>
+    <div>
+        <input type="text" name="NomeDependente" id="NomeDependente" value="" />
+    </div>
+    <div>
+        <span>CPF do dependente</span>
+    </div>
+    <div>
+        <input type="text" name="CPFDependente" id="CPFDependente" value="" />
+    </div>
+    <div>
+        <input type="submit" name="btnDependente" id="btnDependente" value="Adicionar" onclick="desabilitaDependente()" />
+    </div>
+</div>
+<div>
+    <input type="submit" id="btn" name="btn" value="Continuar" />
+</div>
+
+<script src="~/Scripts/jquery-3.3.1.js"></script>
+<script type="text/javascript">
+    function setCookie(cname, cvalue, exdays) {
+        var d = new Date();
+        d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+        var expires = "expires=" + d.toUTCString();
+        document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+    }
+    function getCookie() {
+        return document.cookie.split("=")[1];
+    }
+    function habilitaDependente() {
+        document.getElementById("DivDependente").style.display = "block";
+    };
+    function desabilitaDependente() {
+        document.getElementById("DivDependente").style.display = "none";
+    };
+    $(function () {
+        $('#btnDependente').click(function () {
+            if ($('#NomeDependente').val() == "" || $('#NomeDependente').val() == undefined)
+                alert('Informe o nome');
+            else
+                if ($('#CPFDependente').val() == "" || $('#CPFDependente').val() == undefined || $('#CPFDependente').val().replace(/[^\w\s]/gi, '').length != 11)
+                    alert('Informe o CPF');
+                else {
+                    $.ajax({
+                        type: 'POST',
+                        url: '/api/Dependentes',
+                        cache: false,
+                        contentType: 'application/json; charset=utf-8',
+                        data: JSON.stringify({ Nome: $('#NomeDependente').val(), CPF: $('#CPFDependente').val(), ContribuinteID: getCookie() }),
+                        success: function () {
+                            alert('Adicionado');
+                        }
+                    });
+                }
+        })
+    })
+    $(function () {
+        $('#btn').click(function () {
+            if ($('#Nome').val() == "" || $('#Nome').val() == undefined)
+                alert('Informe o nome');
+            else
+                if ($('#CPF').val() == "" || $('#CPF').val() == undefined || $('#CPF').val().replace(/[^\w\s]/gi, '').length != 11)
+                    alert('Informe o CPF');
+                else
+                    if ($('#Renda').val() <= 0 || $('#Renda').val() == undefined)
+                        alert('Informe a renda');
+                    else {
+                        if ($('#btn').val() == "Salvar") {
+                            window.location.replace("/Home/Imposto");
+                        } else {
+                            $('#btn').val("Salvar");
+                            $("#DivContribuinte :input").attr("disabled", true);
+                            $('#InserirDependente').show();
+                            $.ajax({
+                                type: 'POST',
+                                url: '/api/Contribuintes',
+                                cache: false,
+                                contentType: 'application/json; charset=utf-8',
+                                data: JSON.stringify({ Nome: $('#Nome').val(), CPF: $('#CPF').val(), Renda: $('#Renda').val() }),
+                                success: function (data) {
+                                    setCookie("ContribuinteID", data, Date.now());
+                                }
+                            });
+                        }
+                    }
+        })
+    })
+</script>
