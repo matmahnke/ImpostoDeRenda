@@ -16,7 +16,7 @@ namespace DataAccessLayer
     {
         public CurrentContext() : base("CurrentDB")
         {
-            Database.SetInitializer(new CurrentDbStrategy());
+            //Database.SetInitializer(new CurrentDbStrategy());
         }
         public DbSet<Contribuinte> Contribuintes { get; set; }
         public DbSet<Dependente> Dependentes { get; set; }

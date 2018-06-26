@@ -119,5 +119,3 @@ E:\WebApp\WebApp\bin\pt-br\System.Web.WebPages.Razor.resources.dll
 E:\WebApp\WebApp\obj\Debug\WebApp.csproj.CopyComplete
 E:\WebApp\WebApp\obj\Debug\WebApp.dll
 E:\WebApp\WebApp\obj\Debug\WebApp.pdb
-E:\WebApp\WebApp\bin\CurrentDB.mdf
-E:\WebApp\WebApp\bin\CurrentDB_log.ldf

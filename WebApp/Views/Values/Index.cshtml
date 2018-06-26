@@ -1,0 +1,56 @@
+﻿@model IEnumerable<WebApp.Models.ListViewModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<form action="/Values/Index" method="post">
+    <div>
+        @Html.Label("Salário mínimo")
+    </div>
+    <div>
+        @Html.TextBox("SalarioMinimo")
+    </div>
+    <div>
+        <input type="submit" name="enviar" value="Calcular" class="btn btn-default"  />
+    </div>
+</form>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Renda)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Imposto)
+        </th>
+        <th></th>
+    </tr>
+
+    @{ if (Model != null)
+        {
+            foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Nome)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Renda)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Imposto)
+                    </td>
+                </tr>
+            }
+        }
+    }
+
+</table>

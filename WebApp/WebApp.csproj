@@ -192,11 +192,13 @@
     <Compile Include="Controllers\ContribuintesController.cs" />
     <Compile Include="Controllers\DependentesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\ContribuinteViewModel.cs" />
     <Compile Include="Models\DependenteViewModel.cs" />
+    <Compile Include="Models\TabelaViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -253,6 +255,9 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Imposto.cshtml" />
+    <Content Include="Views\Values\Create.cshtml" />
+    <Content Include="Views\Values\Dependentes.cshtml" />
+    <Content Include="Views\Values\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
